@@ -96,7 +96,7 @@ class Scanner {
 					while ((peek() != '*' || peekNext() != '/') && !isNextAtEnd()) advance();
 					if(isNextAtEnd()){
 						advance();
-						break;
+						break; /* */
 					}
 					advance(); advance();
 				} else {
