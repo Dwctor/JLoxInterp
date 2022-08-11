@@ -58,6 +58,10 @@ class Scanner {
 		return current >= source.length();
 	}
 
+	private boolean isNextAtEnd() {
+		return current >= source.length() - 1;
+	}
+
 	private void scanToken() {
 		char c = advance();
 		switch (c) {
@@ -88,6 +92,13 @@ class Scanner {
 				if (match('/')) {
 					// A comment goes until the end of the line.
 					while (peek() != '\n' && !isAtEnd()) advance();
+				} else if(match('*')){
+					while ((peek() != '*' || peekNext() != '/') && !isNextAtEnd()) advance();
+					if(isNextAtEnd()){
+						advance();
+						break;
+					}
+					advance(); advance();
 				} else {
 					addToken(SLASH);
 				}
