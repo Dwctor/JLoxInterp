@@ -58,6 +58,10 @@ class Scanner {
 		return current >= source.length();
 	}
 
+	private boolean isNextAtEnd() {
+		return current >= source.length() - 1;
+	}
+
 	private void scanToken() {
 		char c = advance();
 		switch (c) {
@@ -92,7 +96,7 @@ class Scanner {
 					while ((peek() != '*' || peekNext() != '/') && !isNextAtEnd()) advance();
 					if(isNextAtEnd()){
 						advance();
-						break; 
+						break;
 					}
 					advance(); advance();
 				} else {
