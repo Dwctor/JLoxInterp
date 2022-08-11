@@ -1,4 +1,4 @@
 # JLoxInterp
 An interpreter for the lox language in java, made as a learning experience following the book "Crafting Interpreters".
 
-Currently under development and with issues/errors.
+Currently under development. So far Scanner is working for basic lexicons.
