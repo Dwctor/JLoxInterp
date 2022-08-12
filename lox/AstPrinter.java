@@ -42,7 +42,7 @@ class AstPrinter implements Expr.Visitor<String> {
 	}
 
 	//Exercise 3 chapter 5: prints into reverse Polish Notation instead of with parenthesis
-	private String RPNparenthesize(String name, Expr... exprs) {
+	/*private String RPNparenthesize(String name, Expr... exprs) {
 		StringBuilder builder = new StringBuilder();
 		for (Expr expr : exprs) {
 			builder.append(expr.accept(this));
@@ -50,7 +50,7 @@ class AstPrinter implements Expr.Visitor<String> {
 	  	}
 		builder.append(name);
 		return builder.toString();
-	}
+	}*/
 
 	//Example of the AST being printed.
 	/*public static void main(String[] args) {
